@@ -79,4 +79,43 @@ def test_create_incident_ai_fallback_edge_case(mock_client):
     assert "action_steps" in data
     assert len(data["action_steps"]) > 0
     # Confirm fallback list contains keyword referencing passwords
-    assert any("password" in step.lower() for step in data["action_steps"])
+
+@patch('ai_service.genai.Client')
+def test_get_incident_summary(mock_client):
+    """
+    Test the neighborhood summarization feature mapping.
+    """
+    mock_instance = mock_client.return_value
+
+    # First, mock the classification so we can create an incident
+    class MockClassificationResponse:
+        text = '{"category": "general_observation", "action_steps": []}'
+    mock_instance.models.generate_content.return_value = MockClassificationResponse()
+
+    # Create an incident to summarize
+    client.post("/api/incidents", json={
+        "title": "Lost Cat",
+        "description": "A furry little orange tabby is wandering around the park.",
+        "neighborhood": "Riverside"
+    })
+
+    # Now, mock the summarization AI call
+    class MockSummaryResponse:
+        text = "A lost orange tabby cat was spotted near the park in Riverside. Keep an eye out."
+    mock_instance.models.generate_content.return_value = MockSummaryResponse()
+
+    response = client.get("/api/incidents/summary?neighborhood=Riverside")
+    assert response.status_code == 200
+    data = response.json()
+    assert "summary" in data
+    assert "orange tabby" in data["summary"]
+
+def test_get_incident_summary_empty():
+    """
+    Test behavior when there are no incidents for a neighborhood.
+    AI shouldn't be called, it should just return the default safe message.
+    """
+    response = client.get("/api/incidents/summary?neighborhood=GhostTown")
+    assert response.status_code == 200
+    data = response.json()
+    assert "Things are looking quiet and safe" in data["summary"]

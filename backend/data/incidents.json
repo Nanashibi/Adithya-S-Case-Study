@@ -1,64 +1,391 @@
 [
   {
-    "id": "inc_9f8a",
-    "title": "Netflix Phishing Text",
-    "description": "I got a text saying my Netflix billing failed and to click a link. The URL looked like net-flix-billing-update.info.",
-    "neighborhood": "Northridge",
-    "category": "digital_threat",
-    "upvotes": 2,
+    "id": "inc_d1",
+    "title": "Suspicious Person Checking Car Handles",
+    "description": "Saw someone in a black hoodie walking down Elm Street pulling on car door handles.",
+    "neighborhood": "Downtown",
+    "category": "verified_alert",
+    "upvotes": 12,
     "action_steps": [
-      "Do not click the link or reply to the text.",
-      "Log into Netflix directly through your browser or official app.",
-      "Block the sender and report as spam."
-    ]
+      "Ensure all vehicle doors are locked.",
+      "Remove any valuables from plain sight."
+    ],
+    "timestamp": "2026-03-19T08:30:00Z"
   },
   {
-    "id": "inc_2b1c",
-    "title": "Loud music at 2am",
-    "description": "Can someone tell the frat house on 5th street to keep it down? It is Tuesday night.",
+    "id": "inc_d2",
+    "title": "Loud Construction Noise Early Morning",
+    "description": "Construction crew on Maple Street started using jackhammers at 5:00 AM.",
     "neighborhood": "Downtown",
     "category": "noise",
-    "upvotes": 0,
-    "action_steps": []
+    "upvotes": 4,
+    "action_steps": [
+      "Review permissible construction hours.",
+      "File a noise complaint."
+    ],
+    "timestamp": "2026-03-18T10:15:00Z"
   },
   {
-    "id": "inc_4d3e",
+    "id": "inc_d3",
+    "title": "Broken Streetlight on 5th Ave",
+    "description": "The streetlight at the corner of 5th and Broad is completely dead, making it pitch black at night.",
+    "neighborhood": "Downtown",
+    "category": "verified_alert",
+    "upvotes": 7,
+    "action_steps": [
+      "Report the broken light to the city maintenance portal.",
+      "Be extra vigilant walking at night."
+    ],
+    "timestamp": "2026-03-17T20:00:00Z"
+  },
+  {
+    "id": "inc_d4",
+    "title": "Parking Meter Scam QR Code",
+    "description": "Found a fake QR code sticker placed over the parking meter payment slot.",
+    "neighborhood": "Downtown",
+    "category": "digital_threat",
+    "upvotes": 21,
+    "action_steps": [
+      "Do not scan unverified QR codes on public meters.",
+      "Use the official city parking App.",
+      "Report the meter to parking enforcement."
+    ],
+    "timestamp": "2026-03-19T09:12:00Z"
+  },
+  {
+    "id": "inc_d5",
+    "title": "Traffic Light out at Main St",
+    "description": "The main intersection traffic lights are flashing red in all directions causing a backup.",
+    "neighborhood": "Downtown",
+    "category": "verified_alert",
+    "upvotes": 4,
+    "action_steps": [
+      "Treat the intersection as a four-way stop.",
+      "Find alternate routes."
+    ],
+    "timestamp": "2026-03-16T15:22:00Z"
+  },
+  {
+    "id": "inc_u1",
+    "title": "Amazon Delivery Phishing Text",
+    "description": "I received an SMS claiming my Amazon package was delayed and asked me to pay a $2.99 fee by clicking a link.",
+    "neighborhood": "Uptown",
+    "category": "digital_threat",
+    "upvotes": 18,
+    "action_steps": [
+      "Do not click on links in unsolicited messages.",
+      "Check your Amazon account directly."
+    ],
+    "timestamp": "2026-03-18T14:10:00Z"
+  },
+  {
+    "id": "inc_u2",
+    "title": "Stray Golden Retriever Found",
+    "description": "Found a sweet golden retriever wandering near the Uptown park. Has a red collar but no tags.",
+    "neighborhood": "Uptown",
+    "category": "noise",
+    "upvotes": 15,
+    "action_steps": [
+      "Check local lost pet groups online.",
+      "Take the dog to a local vet to check for a microchip."
+    ],
+    "timestamp": "2026-03-19T07:45:00Z"
+  },
+  {
+    "id": "inc_u3",
+    "title": "Late Night Fireworks",
+    "description": "Someone was setting off loud fireworks near the Uptown High School field at 11:30 PM.",
+    "neighborhood": "Uptown",
+    "category": "noise",
+    "upvotes": 2,
+    "action_steps": [
+      "Close windows and comfort pets if necessary."
+    ],
+    "timestamp": "2026-03-15T23:35:00Z"
+  },
+  {
+    "id": "inc_u4",
+    "title": "Stolen Bicycle from Porch",
+    "description": "My blue Trek bicycle was taken from my front porch overnight. Cable lock was cut.",
+    "neighborhood": "Uptown",
+    "category": "verified_alert",
+    "upvotes": 8,
+    "action_steps": [
+      "File a police report with the bike's serial number.",
+      "Bring bikes indoors or use a heavy-duty U-lock."
+    ],
+    "timestamp": "2026-03-17T08:00:00Z"
+  },
+  {
+    "id": "inc_u5",
+    "title": "Pothole Damaging Cars",
+    "description": "There is a massive pothole in the right lane on 3rd St. Two cars already blew tires.",
+    "neighborhood": "Uptown",
+    "category": "verified_alert",
+    "upvotes": 34,
+    "action_steps": [
+      "Avoid the right lane on 3rd St.",
+      "Report the pothole to the city transportation department."
+    ],
+    "timestamp": "2026-03-18T16:20:00Z"
+  },
+  {
+    "id": "inc_r1",
+    "title": "Flooded Road near the River",
+    "description": "Heavy rain caused River Road to flood near the old bridge. Several cars are stuck.",
+    "neighborhood": "Riverside",
+    "category": "verified_alert",
+    "upvotes": 25,
+    "action_steps": [
+      "Use alternate routes to avoid the flooded area.",
+      "Do not attempt to drive through deep water."
+    ],
+    "timestamp": "2026-03-19T06:30:00Z"
+  },
+  {
+    "id": "inc_r2",
+    "title": "Fake Survey Email for Credit Card Details",
+    "description": "Sent an email about a 'Riverside Community Survey' promising a $50 gift card, asking for SSN.",
+    "neighborhood": "Riverside",
+    "category": "digital_threat",
+    "upvotes": 5,
+    "action_steps": [
+      "Never provide social security or card details in random surveys.",
+      "Mark the email as phishing."
+    ],
+    "timestamp": "2026-03-17T11:15:00Z"
+  },
+  {
+    "id": "inc_r3",
+    "title": "Coyote Sighting in Park",
+    "description": "Saw a large coyote near the Riverside nature trail. It didn't seem afraid of people.",
+    "neighborhood": "Riverside",
+    "category": "verified_alert",
+    "upvotes": 12,
+    "action_steps": [
+      "Keep small pets on a tight leash.",
+      "Do not run from coyotes; make yourself look large and make noise."
+    ],
+    "timestamp": "2026-03-18T06:45:00Z"
+  },
+  {
+    "id": "inc_r4",
+    "title": "Loud Boat Party",
+    "description": "A boat docked near the marina has been blasting bass-heavy music since 10 PM.",
+    "neighborhood": "Riverside",
+    "category": "noise",
+    "upvotes": 3,
+    "action_steps": [
+      "Contact the harbor master if the noise violates marina quiet hours."
+    ],
+    "timestamp": "2026-03-16T22:30:00Z"
+  },
+  {
+    "id": "inc_r5",
+    "title": "Suspicious Door-to-Door Sales",
+    "description": "Two individuals claiming to sell magazine subscriptions were looking into folks' windows.",
+    "neighborhood": "Riverside",
+    "category": "verified_alert",
+    "upvotes": 19,
+    "action_steps": [
+      "Do not open the door to unverified solicitors.",
+      "Lock doors and report the activity to non-emergency police."
+    ],
+    "timestamp": "2026-03-19T13:40:00Z"
+  },
+  {
+    "id": "inc_m1",
+    "title": "Power Outage affecting 3 Blocks",
+    "description": "Lost power around Oak street and Pine line. Heard a loud pop from the transformer up the road.",
+    "neighborhood": "Maplewood",
+    "category": "verified_alert",
+    "upvotes": 18,
+    "action_steps": [
+      "Report the outage to the local power utility.",
+      "Keep refrigerators closed to preserve food."
+    ],
+    "timestamp": "2026-03-18T19:22:00Z"
+  },
+  {
+    "id": "inc_m2",
+    "title": "Teenagers throwing fireworks late night",
+    "description": "A group of kids were setting off loud fireworks near the elementary school track.",
+    "neighborhood": "Maplewood",
+    "category": "noise",
+    "upvotes": 2,
+    "action_steps": [
+      "Keep pets indoors and calm."
+    ],
+    "timestamp": "2026-03-17T22:45:00Z"
+  },
+  {
+    "id": "inc_m3",
+    "title": "Mail Theft from Mailboxes",
+    "description": "Someone has been opening un-locked mailboxes on Pine street looking for checks.",
+    "neighborhood": "Maplewood",
+    "category": "verified_alert",
+    "upvotes": 27,
+    "action_steps": [
+      "Retrieve mail daily.",
+      "Sign up for USPS Informed Delivery.",
+      "Consider getting a locking mailbox."
+    ],
+    "timestamp": "2026-03-19T10:05:00Z"
+  },
+  {
+    "id": "inc_m4",
+    "title": "Fake Charity Call on Phone",
+    "description": "Got a call from a number claiming to be a police charity asking for credit card donations.",
+    "neighborhood": "Maplewood",
+    "category": "digital_threat",
+    "upvotes": 11,
+    "action_steps": [
+      "Hang up on unsolicited charity calls.",
+      "If you wish to donate, go directly to the organization's official website."
+    ],
+    "timestamp": "2026-03-16T18:10:00Z"
+  },
+  {
+    "id": "inc_m5",
+    "title": "Loud Lawn Mower Early Sunday",
+    "description": "Neighbor at the corner of Cedar and Elm mowing their lawn at 6 AM on a Sunday.",
+    "neighborhood": "Maplewood",
+    "category": "noise",
+    "upvotes": 8,
+    "action_steps": [
+      "Talk to your neighbor amicably about weekend quiet hours."
+    ],
+    "timestamp": "2026-03-15T06:15:00Z"
+  },
+  {
+    "id": "inc_n1",
+    "title": "Netflix Account Suspended Scam",
+    "description": "Got a text saying my Netflix billing failed and to click a link. The URL looked like net-flix-billing-update.info.",
+    "neighborhood": "Northridge",
+    "category": "digital_threat",
+    "upvotes": 9,
+    "action_steps": [
+      "Do not click the link.",
+      "Log into Netflix directly.",
+      "Block the sender."
+    ],
+    "timestamp": "2026-03-19T09:10:00Z"
+  },
+  {
+    "id": "inc_n2",
+    "title": "Missing Orange Tabby Cat",
+    "description": "My mostly orange cat Barnaby got out tonight. He's wearing a blue collar. If seen, please let me know.",
+    "neighborhood": "Northridge",
+    "category": "noise",
+    "upvotes": 6,
+    "action_steps": [
+      "Leave some familiar-smelling items outside.",
+      "Check under porches or in open garages."
+    ],
+    "timestamp": "2026-03-16T21:30:00Z"
+  },
+  {
+    "id": "inc_n3",
+    "title": "Graffiti on Park Benches",
+    "description": "Noticed several benches in Northridge Park have been heavily vandalized with spray paint.",
+    "neighborhood": "Northridge",
+    "category": "verified_alert",
+    "upvotes": 14,
+    "action_steps": [
+      "Report graffiti to the city parks department for clean-up."
+    ],
+    "timestamp": "2026-03-18T10:45:00Z"
+  },
+  {
+    "id": "inc_n4",
+    "title": "Realtor Scam targeting Seniors",
+    "description": "A man claiming to be a realtor is aggressively knocking on doors asking to appraise homes for cash offers immediately.",
+    "neighborhood": "Northridge",
+    "category": "verified_alert",
+    "upvotes": 22,
+    "action_steps": [
+      "Do not invite unsolicited individuals into your home.",
+      "Report aggressive solicitation to the police."
+    ],
+    "timestamp": "2026-03-19T14:30:00Z"
+  },
+  {
+    "id": "inc_n5",
+    "title": "Barking dogs waking everyone up",
+    "description": "The house on the corner of Summit drive leaves their three large dogs out all night and they bark at every passing car.",
+    "neighborhood": "Northridge",
+    "category": "noise",
+    "upvotes": 11,
+    "action_steps": [
+      "Leave a polite note or speak with the neighbor.",
+      "Contact animal control if the issue persists long-term."
+    ],
+    "timestamp": "2026-03-15T02:00:00Z"
+  },
+  {
+    "id": "inc_w1",
     "title": "Package Thieves Following Delivery Truck",
-    "description": "A silver sedan with out-of-state plates is trailing an Amazon truck down Elm Street. They just grabbed a box.",
+    "description": "A silver sedan with out-of-state plates is trailing an Amazon truck. They grabbed a box from my porch.",
+    "neighborhood": "Willow Creek",
+    "category": "verified_alert",
+    "upvotes": 31,
+    "action_steps": [
+      "Require signature delivery.",
+      "Report suspicious vehicles.",
+      "Retrieve packages promptly."
+    ],
+    "timestamp": "2026-03-18T15:20:00Z"
+  },
+  {
+    "id": "inc_w2",
+    "title": "Fake Microsoft Support Caller",
+    "description": "Someone with a heavy accent called my elderly mother claiming they need to install remote software.",
+    "neighborhood": "Willow Creek",
+    "category": "digital_threat",
+    "upvotes": 14,
+    "action_steps": [
+      "Microsoft never proactively calls you.",
+      "Never install AnyDesk or TeamViewer from random callers."
+    ],
+    "timestamp": "2026-03-17T13:45:00Z"
+  },
+  {
+    "id": "inc_w3",
+    "title": "Speeding cars on residential road",
+    "description": "Cars are continuing to use Willow Creek Blvd as a drag strip late at night going well over 60 mph.",
+    "neighborhood": "Willow Creek",
+    "category": "verified_alert",
+    "upvotes": 42,
+    "action_steps": [
+      "Petition the city to install speed bumps or a stop sign.",
+      "Request increased police patrols late at night."
+    ],
+    "timestamp": "2026-03-18T23:55:00Z"
+  },
+  {
+    "id": "inc_w4",
+    "title": "Blocked storm drain",
+    "description": "The main drain on 7th and Willow is completely blocked by debris, and water is pooling into the street.",
     "neighborhood": "Willow Creek",
     "category": "verified_alert",
     "upvotes": 5,
-    "action_steps": []
+    "action_steps": [
+      "Call the city water and sewer department.",
+      "Drive slowly to avoid hydroplaning."
+    ],
+    "timestamp": "2026-03-19T06:05:00Z"
   },
   {
-    "id": "inc_7x9p",
-    "title": "Fake Microsoft Support Caller",
-    "description": "Someone with a heavy accent called my elderly mother claiming they need to install remote software to fix a virus on her PC. Thankfully she hung up.",
+    "id": "inc_w5",
+    "title": "Crypto Scam on WhatsApp",
+    "description": "Received a message from an unknown number pretending to be an old acquaintance proposing a crypto investment.",
     "neighborhood": "Willow Creek",
     "category": "digital_threat",
-    "upvotes": 1,
+    "upvotes": 8,
     "action_steps": [
-      "Microsoft will never proactively call you about a PC issue.",
-      "Never install AnyDesk, TeamViewer, or other remote tools if instructed by an unsolicited caller.",
-      "If you suspect access was given, disconnect the internet and run a malware scan."
-    ]
-  },
-  {
-    "id": "inc_1a2b",
-    "title": "Missing Orange Tabby Cat",
-    "description": "My mostly orange cat Barnaby got out tonight. Hes wearing a blue collar.",
-    "neighborhood": "Northridge",
-    "category": "noise",
-    "upvotes": 0,
-    "action_steps": []
-  },
-  {
-    "id": "inc_9p8q",
-    "title": "Car break-ins on 12th Ave",
-    "description": "Three cars had their windows smashed overnight on 12th avenue. Make sure you arent leaving valuables visible.",
-    "neighborhood": "Downtown",
-    "category": "verified_alert",
-    "upvotes": 3,
-    "action_steps": []
+      "Do not engage with strangers offering investment advice via text.",
+      "Block and report the number within WhatsApp."
+    ],
+    "timestamp": "2026-03-19T10:15:00Z"
   }
 ]

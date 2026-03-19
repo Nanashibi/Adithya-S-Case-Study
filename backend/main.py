@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 from schemas import IncidentCreate, IncidentResponse, SafeCircleUpdateCreate, SafeCircleUpdateResponse
-from ai_service import classify_incident
+from ai_service import classify_incident, summarize_incidents
 
 # Load environment variables from exactly one directory up (.env in root)
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
@@ -59,6 +59,19 @@ def save_circles(data: dict):
     with open(CIRCLES_DATA_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
+@app.get("/api/incidents/summary")
+def get_neighborhood_summary(neighborhood: str = Query(...)):
+    incidents = load_data()
+    filtered_incidents = [inc for inc in incidents if inc.get("neighborhood") == neighborhood]
+    
+    if not filtered_incidents:
+        return {"summary": f"Things are looking quiet and safe in {neighborhood} recently. No major incidents to report."}
+        
+    incidents_text = "\n".join([f"- {inc['title']}: {inc['description']} (Category: {inc.get('category', 'unknown')})" for inc in filtered_incidents[:10]]) # limit to last 10 to fit context
+    
+    summary = summarize_incidents(incidents_text, neighborhood)
+    return {"summary": summary}
+    
 @app.get("/api/incidents/stats")
 def get_incident_stats():
     data = load_data()
@@ -116,6 +129,22 @@ def verify_incident(incident_id: str):
     for index, item in enumerate(data):
         if item["id"] == incident_id:
             data[index]["upvotes"] = data[index].get("upvotes", 0) + 1
+            save_data(data)
+            return data[index]
+    raise HTTPException(status_code=404, detail="Incident not found")
+
+@app.put("/api/incidents/{incident_id}", response_model=IncidentResponse)
+def update_incident(incident_id: str, incident_update: IncidentCreate):
+    data = load_data()
+    for index, item in enumerate(data):
+        if item["id"] == incident_id:
+            # Reclassify based on new description
+            classification = classify_incident(incident_update.description)
+            data[index]["title"] = incident_update.title
+            data[index]["description"] = incident_update.description
+            data[index]["neighborhood"] = incident_update.neighborhood
+            data[index]["category"] = classification.get("category", "noise")
+            data[index]["action_steps"] = classification.get("action_steps", [])
             save_data(data)
             return data[index]
     raise HTTPException(status_code=404, detail="Incident not found")

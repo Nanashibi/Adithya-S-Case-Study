@@ -78,3 +78,44 @@ def classify_incident(description: str) -> dict:
         logger.error(f"AI Classification failed: {str(e)}. Using fallback mechanism.")
         # Invoke the manual rule-based AI fallback gracefully
         return classify_incident_fallback(description)
+
+def summarize_incidents_fallback(incidents_text: str) -> str:
+    """
+    Fallback for summarization if the AI fails. Returns a generic safe message.
+    """
+    return "Summary currently unavailable due to system load. Please review the individual safety stats below."
+
+def summarize_incidents(incidents_text: str, neighborhood: str) -> str:
+    """
+    Generates a calm, anxiety-reducing digest of recent incidents for a neighborhood.
+    """
+    if not incidents_text.strip():
+        return f"Things are looking quiet and safe in {neighborhood} recently. No major incidents to report."
+        
+    try:
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key or api_key == "your_gemini_api_key_here":
+            raise ValueError("Invalid or missing GEMINI_API_KEY")
+            
+        client = genai.Client(api_key=api_key)
+        
+        prompt = f"""
+        You are a reassuring community safety guardian for the neighborhood of "{neighborhood}". 
+        Read the following recent incident titles and descriptions. 
+        Write a calm, anxiety-reducing digest (maximum 3 sentences) summarizing the activity.
+        Do not cause panic. Focus on trends and actionable advice. Do not use markdown bullet points.
+
+        Incidents:
+        {incidents_text}
+        """
+        
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+        )
+        
+        return response.text.strip()
+        
+    except Exception as e:
+        logger.error(f"AI Summarization failed: {str(e)}. Using fallback mechanism.")
+        return summarize_incidents_fallback(incidents_text)
