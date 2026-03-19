@@ -1,0 +1,64 @@
+[
+  {
+    "id": "inc_9f8a",
+    "title": "Netflix Phishing Text",
+    "description": "I got a text saying my Netflix billing failed and to click a link. The URL looked like net-flix-billing-update.info.",
+    "neighborhood": "Northridge",
+    "category": "digital_threat",
+    "upvotes": 2,
+    "action_steps": [
+      "Do not click the link or reply to the text.",
+      "Log into Netflix directly through your browser or official app.",
+      "Block the sender and report as spam."
+    ]
+  },
+  {
+    "id": "inc_2b1c",
+    "title": "Loud music at 2am",
+    "description": "Can someone tell the frat house on 5th street to keep it down? It is Tuesday night.",
+    "neighborhood": "Downtown",
+    "category": "noise",
+    "upvotes": 0,
+    "action_steps": []
+  },
+  {
+    "id": "inc_4d3e",
+    "title": "Package Thieves Following Delivery Truck",
+    "description": "A silver sedan with out-of-state plates is trailing an Amazon truck down Elm Street. They just grabbed a box.",
+    "neighborhood": "Willow Creek",
+    "category": "verified_alert",
+    "upvotes": 5,
+    "action_steps": []
+  },
+  {
+    "id": "inc_7x9p",
+    "title": "Fake Microsoft Support Caller",
+    "description": "Someone with a heavy accent called my elderly mother claiming they need to install remote software to fix a virus on her PC. Thankfully she hung up.",
+    "neighborhood": "Willow Creek",
+    "category": "digital_threat",
+    "upvotes": 1,
+    "action_steps": [
+      "Microsoft will never proactively call you about a PC issue.",
+      "Never install AnyDesk, TeamViewer, or other remote tools if instructed by an unsolicited caller.",
+      "If you suspect access was given, disconnect the internet and run a malware scan."
+    ]
+  },
+  {
+    "id": "inc_1a2b",
+    "title": "Missing Orange Tabby Cat",
+    "description": "My mostly orange cat Barnaby got out tonight. Hes wearing a blue collar.",
+    "neighborhood": "Northridge",
+    "category": "noise",
+    "upvotes": 0,
+    "action_steps": []
+  },
+  {
+    "id": "inc_9p8q",
+    "title": "Car break-ins on 12th Ave",
+    "description": "Three cars had their windows smashed overnight on 12th avenue. Make sure you arent leaving valuables visible.",
+    "neighborhood": "Downtown",
+    "category": "verified_alert",
+    "upvotes": 3,
+    "action_steps": []
+  }
+]
