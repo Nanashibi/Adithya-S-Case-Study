@@ -1,6 +1,8 @@
 Candidate Name: Adithya S <br>
 Scenario Chosen: 3. Community Safety & Digital Wellness <br>
-Estimated Time Spent: 5 hours
+Estimated Time Spent: 5 hours <br>
+
+Demo Link: https://youtu.be/6nqc0Li61qU
 
 Quick Start: <br>
 ● Prerequisites: Node.js, Python 3.8+ <br>
